@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acortador de Enlaces AWS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Acortador de Enlaces</h1>
+    <p class="subtitle">Web Page Midterm AWS</p>
+
+    <form id="shorten-form">
+      <div class="input-group">
+        <input 
+          type="url" 
+          id="original-url" 
+          placeholder="https://ejemplo.com/mi-ruta-larga" 
+          required
+        />
+        <button type="submit" id="btn-submit">Acortar</button>
+      </div>
+    </form>
+
+    <div id="error-box" class="alert error hidden"></div>
+
+    <div id="result-box" class="result-card hidden">
+      <h3>Enlace generado</h3>
+      <div class="result-action">
+        <input type="text" id="short-url-output" readonly />
+        <button id="btn-copy">Copiar</button>
+      </div>
+      <p id="copy-status" class="copy-hint hidden">Copiado al portapapeles</p>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

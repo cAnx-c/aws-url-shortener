@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --accent: #38bdf8;
+  --accent-hover: #0284c7;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --error: #ef4444;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif; 
+}
+body { 
+    background-color: var(--bg); 
+    color: var(--text); 
+    min-height: 100vh; display: grid; 
+    place-items: center; 
+    padding: 1.5rem; 
+}
+.container { 
+    background-color: var(--card-bg); 
+    width: 100%; 
+    max-width: 580px; 
+    padding: 2rem; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+}
+h1 { 
+    font-size: 1.8rem; 
+    margin-bottom: 0.25rem; 
+    text-align: center; 
+}
+.subtitle { 
+    color: var(--text-muted); 
+    font-size: 0.9rem; 
+    text-align: center; 
+    margin-bottom: 1.5rem; 
+}
+.input-group { 
+    display: flex; 
+    gap: 0.5rem; 
+    margin-bottom: 1rem; 
+}
+input[type="url"], 
+input[type="text"] { 
+    flex: 1; 
+    padding: 0.75rem 1rem; 
+    border-radius: 6px; 
+    border: 1px solid #334155; 
+    background: #0f172a; 
+    color: #fff; 
+    font-size: 0.95rem; 
+}
+input:focus { 
+    outline: 2px solid var(--accent); 
+}
+button { 
+    background: var(--accent);
+    color: #0f172a; 
+    border: none; 
+    font-weight: 600; 
+    padding: 0.75rem 1.25rem; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: 0.2s; 
+}
+button:hover { 
+    background: var(--accent-hover); 
+}
+.alert { 
+    padding: 0.75rem 1rem; 
+    border-radius: 6px; 
+    font-size: 0.9rem; 
+    margin-top: 1rem;
+}
+.alert.error { 
+    background: rgba(239, 68, 68, 0.2); 
+    border: 1px solid var(--error); 
+    color: #fca5a5; 
+}
+.result-card { 
+    margin-top: 1.5rem; 
+    padding: 1rem; 
+    background: #0f172a; 
+    border-radius: 8px; 
+    border: 1px solid #334155; 
+}
+.result-card h3 { 
+    font-size: 1rem; 
+    margin-bottom: 0.5rem; 
+}
+.result-action { 
+    display: flex; 
+    gap: 0.5rem; 
+}
+.copy-hint { 
+    color: #4ade80; 
+    font-size: 0.8rem; 
+    margin-top: 0.5rem; 
+}
+.hidden { 
+    display: none; 
+}
