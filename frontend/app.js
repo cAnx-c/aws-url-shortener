@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://<ejemplo_de_ip_jjj>:8000";
+const API_BASE_URL = "http://3.87.78.212:8000";
 
 const form = document.getElementById("shorten-form");
 const originalUrlInput = document.getElementById("original-url");
