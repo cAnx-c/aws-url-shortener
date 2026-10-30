@@ -1,12 +1,11 @@
 import os
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    AWS_REGION: str = os.getenv("AWS_REGION", "us-east-1")
-    DYNAMODB_TABLE: str = os.getenv("DYNAMODB_TABLE", "UrlShortener")
-    BASE_URL: str = os.getenv("BASE_URL", "http://localhost:8000")
+    AWS_REGION: str
+    DYNAMODB_TABLE: str
+    BASE_URL: str
 
-    class Config:
-        env_file = ".env"
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 settings = Settings()
